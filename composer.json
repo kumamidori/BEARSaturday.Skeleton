@@ -4,7 +4,9 @@
     "keywords":[
     ],
     "require": {
-        "php": ">=5.3.2"
+        "php": ">=5.3.2",
+        "monolog/monolog": "dev-master",
+        "kumamidori/BEAR.Saturday-Setup": "dev-master"
     },
     "autoload":{
         "psr-0":{
