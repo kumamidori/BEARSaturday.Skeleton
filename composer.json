@@ -7,7 +7,7 @@
         "php": ">=5.3.2"
     },
     "scripts"   :{
-        "post-install-cmd": "Saturday\\Setup\\Installer::postInstall"
+        "post-install-cmd": "Installer::postInstall"
     },
     "autoload":{
         "psr-0":{
