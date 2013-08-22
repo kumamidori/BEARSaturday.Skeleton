@@ -1,12 +1,12 @@
 {
-    "name": "kumamidori/BEAR.Saturday-Setup",
+    "name": "bear.saturday/setup",
     "description":" ",
     "keywords":[
     ],
     "require": {
         "php": ">=5.3.2",
         "monolog/monolog": "dev-master",
-        "kumamidori/BEAR.Saturday-Setup": "dev-master"
+        "bear.saturday/setup": "dev-master"
     },
     "autoload":{
         "psr-0":{
