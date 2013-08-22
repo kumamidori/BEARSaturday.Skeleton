@@ -1,4 +1,5 @@
 <?php
+namespace Saturday\Setup;
 
 use Composer\Script\Event;
 
