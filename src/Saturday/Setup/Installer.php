@@ -11,7 +11,7 @@ namespace Saturday\Setup;
  *
  * @package Saturday.Setup
  */
-class Setup
+class Installer
 {
     public static function postInstall(Event $event = null)
     {
