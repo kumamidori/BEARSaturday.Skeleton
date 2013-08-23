@@ -4,12 +4,11 @@
  *
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
-namespace Saturday\Setup\Exception;
+namespace Ex\Saturday\Setup\Exception;
 
 /**
  * RuntimeException
  *
- * @package Saturday.Setup
  */
 class RuntimeException extends \LogicException implements ExceptionInterface
 {

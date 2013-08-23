@@ -4,13 +4,12 @@
  *
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
-namespace Saturday\Setup\Exception;
+namespace Ex\Saturday\Setup\Exception;
 
 /**
- * Generic package exception
+ * LogicException
  *
- * @package Saturday.Setup
  */
-interface ExceptionInterface
+class LogicException extends \LogicException implements ExceptionInterface
 {
 }
