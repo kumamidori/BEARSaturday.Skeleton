@@ -37,7 +37,7 @@ class Installer
 
         echo '***** Installing...' . PHP_EOL;
         foreach($commands as $cmd) {
-            echo '** ' . $cmd . . ' **' . PHP_EOL;
+            echo '** ' . $cmd . ' **' . PHP_EOL;
             system($cmd, $retval);
         }
         echo '***** Completed.' . PHP_EOL;
