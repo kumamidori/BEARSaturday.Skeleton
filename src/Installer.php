@@ -9,7 +9,7 @@ class Installer
 {
     public static function postInstall(Event $event = null)
     {
-        $projectRoot = dirname(__DIR__);
+        $projectRoot = dirname(dirname(dirname(dirname(__DIR__))));
         self::pearLocalSetup($projectRoot);
     }
 
