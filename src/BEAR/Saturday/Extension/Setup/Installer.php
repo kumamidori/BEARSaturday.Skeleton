@@ -1,25 +1,16 @@
 <?php
 /**
- * This file is part of the Saturday.Setup
- *
- * @license http://opensource.org/licenses/bsd-license.php BSD
  */
-namespace Ex\Saturday\Setup;
+namespace BEAR\Saturday\Extension\Setup;
 
 /**
- * Saturday.Setup
- *
- * @package Saturday.Setup
  */
 class Installer
 {
     public static function postInstall(Event $event = null)
     {
-        $skeletonRoot = dirname(__DIR__);
-        $folderName = (new \SplFileInfo($skeletonRoot))->getFilename();
-        list($vendorName, $packageName) = explode('.', $folderName);
-
-        self::pearLocalSetup($skeletonRoot);
+        $projectRoot = dirname(__DIR__);
+        self::pearLocalSetup($projectRoot);
     }
 
     private static function pearLocalSetup($path)

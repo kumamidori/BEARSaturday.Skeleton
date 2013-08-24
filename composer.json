@@ -1,5 +1,5 @@
 {
-    "name": "ex.saturday/setup",
+    "name": "kumamidori/bear-saturday-extension-setup",
     "description":" ",
     "keywords":[
     ],
@@ -8,7 +8,7 @@
     },
     "autoload":{
         "psr-0":{
-            "Ex\\Saturday\\Setup\\": "src/"
+            "BEAR\\Saturday\\Extension\\Setup\\": "src/"
         }
     }
 }
