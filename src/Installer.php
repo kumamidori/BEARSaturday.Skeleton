@@ -13,9 +13,9 @@ class Installer
         self::pearLocalSetup($projectRoot);
     }
 
-    public static function pearLocalSetup($path)
+    public static function pearLocalSetup($fullPath)
     {
-        $libsPath = $path . '/' . 'libs';
+        $libsPath = $fullPath . '/' . 'libs';
         if(file_exists($libsPath . '/.pearrc')) {
             echo "Error: path {$libsPath}/.pearrc already exists." . PHP_EOL;
             return;
@@ -37,7 +37,8 @@ class Installer
 
         echo '***** Installing...' . PHP_EOL;
         foreach($commands as $cmd) {
-            exec($cmd);
+            echo '** ' . $cmd . . ' **' . PHP_EOL;
+            system($cmd, $retval);
         }
         echo '***** Completed.' . PHP_EOL;
     }
