@@ -3,6 +3,8 @@
  */
 namespace BEAR\Saturday\Extension\Setup;
 
+use Composer\Script\Event;
+
 /**
  */
 class Installer
