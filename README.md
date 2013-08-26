@@ -23,7 +23,6 @@ Summary
                     +--- php
                           |
                           +--- BEAR ＜Here!
-
     ```
 
 
@@ -41,21 +40,22 @@ Installation / Usage
 
 2. Download the [`composer.phar`](https://getcomposer.org/composer.phar) executable or use the installer.
 
-    ``` sh
+    ```
     $ curl -sS https://getcomposer.org/installer | php
     ```
 
     ※curl コマンドが無ければ、以下でも同じことができます。
-    ``` sh
+
+    ```
     $ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
     ```
 
-3. Create a composer.json
+3. 下記内容でファイル名「composer.json」として保存します。 
 
     ``` json
     {
         "require": {
-            "kumamidori/bear-saturday-extension-setup": "dev-master"
+            "kumamidori/bear-saturday-extension-setup": "*"
         },
         "scripts": {
             "post-install-cmd": "Installer::postInstall"
