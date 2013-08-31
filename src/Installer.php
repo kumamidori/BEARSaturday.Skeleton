@@ -22,11 +22,10 @@ class Installer
 
             return;
         }
-        chdir($fullPath);
+        chdir($libsPath);
         mkdir($libsPath);
 
         $commands = array();
-        $commands[] = "cp {$fullPath}/composer.json {$fullPath}/composer.json.bkup";
         $commands[] = "pear config-create {$libsPath} .pearrc";
         $commands[] = "pear -c {$libsPath}/.pearrc config-set auto_discover 1";
         $commands[] = "pear -c {$libsPath}/.pearrc config-set preferred_state alpha";
@@ -48,6 +47,8 @@ class Installer
 
         $io->write('<info>***** Init Application...</info>');
         $commands = array();
+        chdir($fullPath);
+        $commands[] = "cp {$fullPath}/composer.json {$fullPath}/composer.json.bkup";
         $commands[] = "libs/pear/bear init-app --pearrc libs/.pearrc {$fullPath}";
         $commands[] = "rm -Rf {$fullPath}/composer.json";
         $commands[] = "rm -Rf {$fullPath}/composer.lock";
