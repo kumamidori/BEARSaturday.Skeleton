@@ -3,10 +3,11 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
 
 Beta version.
 
-Summary
+概要
 --------------------
 
 下記のセットアップを行います。
+
     ```
     /path/to/your/project
         |
@@ -34,7 +35,7 @@ Summary
 5. phpunit 等をグローバルのComposer環境にインストールします。
 
 
-Installation / Usage
+インストール / 使い方
 --------------------
 
 1. cd /path/to/your/local/project

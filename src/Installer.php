@@ -45,8 +45,15 @@ class Installer
         $io->write('<info>***** Installation Complete.</info>');
 
         $io->write('<info>***** Init Application...</info>');
-        $cmd = "{$libsPath}/pear/bear -c {$libsPath}/.pearrc init-app {$fullPath}";
-        system($cmd, $retval);
-        $io->write('<info>***** Application Ok...</info>');
+        $commands = array();
+        $commands[] = "{$libsPath}/pear/bear --pearrc {$libsPath}/.pearrc init-app {$fullPath}";
+        $commands[] = "rm -Rf {$fullPath}/composer.json";
+        $commands[] = "rm -Rf {$fullPath}/composer.lock";
+
+        foreach($commands as $cmd) {
+            $io->write('<info>** ' . $cmd . ' **</info>');
+            system($cmd, $retval);
+        }
+        $io->write('<info>***** Init Application Complete...</info>');
     }
 }
