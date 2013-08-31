@@ -22,8 +22,8 @@ class Installer
 
             return;
         }
-        chdir($libsPath);
         mkdir($libsPath);
+        chdir($libsPath);
 
         $commands = array();
         $commands[] = "pear config-create {$libsPath} .pearrc";
