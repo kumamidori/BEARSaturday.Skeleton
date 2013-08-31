@@ -47,9 +47,8 @@ class Installer
 
         $io->write('<info>***** Init Application...</info>');
         $commands = array();
-        chdir($fullPath);
         $commands[] = "cp {$fullPath}/composer.json {$fullPath}/composer.json.bkup";
-        $commands[] = "libs/pear/bear init-app --pearrc libs/.pearrc {$fullPath}";
+        $commands[] = "{$libsPath}/pear/bear init-app --pearrc {$libsPath}/.pearrc {$fullPath}";
         $commands[] = "rm -Rf {$fullPath}/composer.json";
         $commands[] = "rm -Rf {$fullPath}/composer.lock";
         $commands[] = "mv {$fullPath}/composer.json.bkup {$fullPath}/composer.json";
