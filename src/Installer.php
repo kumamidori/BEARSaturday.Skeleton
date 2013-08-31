@@ -15,15 +15,18 @@ class Installer
 
     public static function pearLocalSetup(Event $event, $fullPath)
     {
+        $io = $event->getIO();
         $libsPath = $fullPath . '/' . 'libs';
-        if(file_exists($libsPath . '/.pearrc')) {
-            echo "Error: path {$libsPath}/.pearrc already exists." . PHP_EOL;
+        if(file_exists($libsPath . '/.pearrc') || file_exists($fullPath . '/App.php')) {
+            $io->write("<error>** Error: path {$libsPath}/.pearrc already exists. **</error>");
+
             return;
         }
+        chdir($fullPath);
         mkdir($libsPath);
-        chdir($libsPath);
 
         $commands = array();
+        $commands[] = "cp {$fullPath}/composer.json {$fullPath}/composer.json.bkup";
         $commands[] = "pear config-create {$libsPath} .pearrc";
         $commands[] = "pear -c {$libsPath}/.pearrc config-set auto_discover 1";
         $commands[] = "pear -c {$libsPath}/.pearrc config-set preferred_state alpha";
@@ -36,7 +39,6 @@ class Installer
         // -a は不要
         $commands[] = "{$libsPath}/pear/pear -c {$libsPath}/.pearrc install bear/BEAR-beta";
 
-        $io = $event->getIO();
         $io->write('<info>***** Installing...</info>');
         foreach($commands as $cmd) {
             $io->write('<info>** ' . $cmd . ' **</info>');
@@ -46,9 +48,10 @@ class Installer
 
         $io->write('<info>***** Init Application...</info>');
         $commands = array();
-        $commands[] = "{$libsPath}/pear/bear --pearrc {$libsPath}/.pearrc init-app {$fullPath}";
+        $commands[] = "libs/pear/bear init-app --pearrc libs/.pearrc {$fullPath}";
         $commands[] = "rm -Rf {$fullPath}/composer.json";
         $commands[] = "rm -Rf {$fullPath}/composer.lock";
+        $commands[] = "mv {$fullPath}/composer.json.bkup {$fullPath}/composer.json";
 
         foreach($commands as $cmd) {
             $io->write('<info>** ' . $cmd . ' **</info>');
