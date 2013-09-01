@@ -84,16 +84,16 @@ PHPUnitインストール手順と運用について
 http://phpunit.de/manual/current/ja/installation.html
 
 - PEARでシステムグローバル環境にPHPUnitをインストールする場合の制限
-  -- root相当権限が無いとインストールができない
+  - root相当権限が無いとインストールができない
 
 - PEARでユーザ環境（homeやプロジェクト下）にインストールする場合の制限
-  -- デフォルト（標準）だと、コマンド（CLI）がシステムグローバルの include_path を見るため、起動できない
-  -- http://www.php.net/manual/ja/ini.core.php#ini.include-path
-  --  include_path で環境変数 ${USER} を使う例 `include_path = ".:${USER}/pear/php"`
+  - デフォルト（標準）だと、コマンド（CLI）がシステムグローバルの include_path を見るため、起動できない
+  - http://www.php.net/manual/ja/ini.core.php#ini.include-path
+  -  include_path で環境変数 ${USER} を使う例 `include_path = ".:${USER}/pear/php"`
 
 - Composer でローカル環境（プロジェクト下）にインストールする場合のデメリット
-  -- 本番環境とデバッグ環境で、依存管理を分けるための工夫が必要になる（本番環境にはphpunitが要らないので）
+  - 本番環境とデバッグ環境で、依存管理を分けるための工夫が必要になる（本番環境にはphpunitが要らないので）
 
 - Composer でローカル環境（プロジェクト下）にインストールする場合
-  -- 本番環境とデバッグ環境で、簡単に依存管理を分けることができる点がメリット
-  -- パスを通すのがめんどうな点がデメリットか
+  - 本番環境とデバッグ環境で、簡単に依存管理を分けることができる点がメリット
+  - パスを通すのがめんどうな点がデメリットか
