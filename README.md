@@ -67,7 +67,7 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
 
 4. Composerを実行: `php composer.phar install`
 
-5. Composerを実行: `php composer.phar global require 'h4cc/phpqatools'`
+5. Composerを実行: `php composer.phar global require 'h4cc/phpqatools="*"'`
 
 6. 上記5. でインストールしたphpunitコマンドへのパスを通す。
 
