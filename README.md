@@ -32,7 +32,7 @@ Beta version.
 2. 上記1. のディレクトリに、composer をインストールします
 3. 上記1. のディレクトリに、ファイル「composer.json」を新規作成して保存します
 4. composer install を実行することで、BEAR.Saturdayのスケルトン作成までを完了します。
-5. phpunit 等をグローバルのComposer環境にインストールします。
+5. phpunit 等をグローバルのComposer環境にインストールして、環境変数PATHでコマンドへのパスを通します。
 
 
 インストール / 使い方
@@ -68,3 +68,10 @@ Beta version.
 4. Composerを実行: `php composer.phar install`
 
 5. Composerを実行: `composer global require 'h4cc/phpqatools'`
+   上記4. でインストールしたphpunitコマンドへのパスを通すため。
+
+    zsh の場合
+    ```
+    export PATH=~/.composer/vendor/phpunit/phpunit/composer/bin:$PATH
+    ```
+    ※優先したいパスを左側に書く（左から評価されてマッチしたパスが使われるので）
