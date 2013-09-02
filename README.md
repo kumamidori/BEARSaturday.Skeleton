@@ -67,22 +67,35 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
 
 4. Composerを実行: `php composer.phar install`
 
+   普通にSaturdayがセットアップされた状態になったことを確認。
+
 5. Composerを実行: `php composer.phar global require 'h4cc/phpqatools=*'`
 
-6. 上記5. でインストールしたphpunitコマンドへのパスを通す。
+   PHPUnitをComposerのシステムグローバル環境にインストール。
+   （通常だと、ホームの下に入ります。~/.composer/ 下）。
+
+6. Composerを実行: `php composer.phar dump-autoload`
+
+   Saturdayでテスト実行する際に、初期ロードされる bootstrap.php で、Composer標準のオートローダークラスを使うため。
+
+7. 上記5. でインストールしたphpunitコマンドへ、パスを通す。
 
     zsh の場合
     ```
     export PATH=~/.composer/vendor/phpunit/phpunit/composer/bin:$PATH
     ```
-    ※優先したいパスを左側に書く（左から評価されてマッチしたパスが使われるので）
+
+    ※優先したいパスを左側に書いて先に評価させる必要がある（左から評価されてマッチしたパスが使われるので）
 
 
-PHPUnitインストール手順と運用について
+余談：PHPUnitインストール手順と運用について
 --------------------
 
+原典：
 http://phpunit.de/manual/current/ja/installation.html
 
+
+メモ：
 - PEARでシステムグローバル環境にPHPUnitをインストールする場合の制限
   - root相当権限が無いとインストールができない
 
