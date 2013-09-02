@@ -8,7 +8,7 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
 
 下記のセットアップを行います。
 
-    ```
+    ``` 
     /path/to/your/project
         |
         +--- App
@@ -28,11 +28,12 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
         +--- App.php
     ```
 
-1. cd /path/to/your/local/project
-2. 上記1. のディレクトリに、composer をインストールします
-3. 上記1. のディレクトリに、ファイル「composer.json」を新規作成して保存します
-4. composer install を実行することで、BEAR.Saturdayのスケルトン作成までを完了します。
-5. phpunit 等をグローバルのComposer環境にインストールして、環境変数PATHでコマンドへのパスを通します。
+### だいたいの流れ
+- cd /path/to/your/local/project
+- プロジェクトのディレクトリに、composer をインストールする
+- ファイル「composer.json」を新規作成して保存
+- composer install を実行することで、BEAR.Saturdayのスケルトン作成までが完了
+- phpunit 等をグローバルのComposer環境にインストールする
 
 
 インストール / 使い方
@@ -81,9 +82,24 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
 7. 上記5. でインストールしたphpunitコマンドへ、パスを通す。
 
     zsh の場合
+
+
+    vi ~/.zshrc
     ```
     export PATH=~/.composer/vendor/phpunit/phpunit/composer/bin:$PATH
     ```
+
+    反映
+    ```
+    source ~/.zshrc
+    ```
+
+    確認
+    ```
+    which phpunit
+    ```
+    で、```~/.composer/vendor/phpunit/phpunit/composer/bin/phpunit```になること。
+
 
     ※優先したいパスを左側に書いて先に評価させる必要がある（左から評価されてマッチしたパスが使われるので）
 
