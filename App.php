@@ -16,7 +16,7 @@
 define('_BEAR_APP_HOME', realpath(dirname(__FILE__)));
 
 // composer auto load
-require_once __DIR__ . '/libs/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 require_once 'BEAR.php';
 
 $bearMode = isset($_SERVER['bearmode']) ? $_SERVER['bearmode'] : 0;
@@ -62,7 +62,6 @@ class App
                 // for UNIT test or HTTP access test
                 $app['core']['debug'] = false;
                 $app['App_Db']['dsn']['default'] = $app['App_Db']['dsn']['slave'] = $app['App_Db']['dsn']['test'];
-                $app['BEAR_Log']['__class'] = 'BEAR_Log_Test';
                 $app['BEAR_Resource_Request']['__class'] = 'BEAR_Resource_Request_Test';
                 break;
             case 0 :
