@@ -23,7 +23,7 @@ class Installer
         );
         foreach($commands as $cmd) {
             $event->getIo()->write('<info>' . $cmd . '</info>');
-//            system($cmd, $retval);
+            passthru($cmd, $retval);
         }
 
         $htaccess = "{$dir}/htdocs/.htaccess";
