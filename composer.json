@@ -4,14 +4,22 @@
     "keywords": [
         "BEAR",
         "BEARSatruday",
-        "framework"
+        "framework",
+        "SKeleton"
     ],
     "homepage": "https://github.com/BEARSaturday/BEARSaturday",
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "BEAR.Package Contributors",
-            "homepage": "https://github.com/BEARSaturday/BEARSaturday/graphs/contributors"
+            "name": "Nana Yamane",
+            "homepage": "https://github.com/kumamidori",
+            "role": "Developer"
+        },
+        {
+            "name": "Akihito Koriyama",
+            "email": "akihito.koriyama@gmail.com",
+            "homepage": "https://github.com/koriym",
+            "role": "Developer"
         }
     ],
     "repositories": [
