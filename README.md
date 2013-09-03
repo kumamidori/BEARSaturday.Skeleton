@@ -1,7 +1,5 @@
-BEAR-Saturday-Extension-Setup - Local Pear Installer
+BEARSaturday/Skeleton
 ========================================
-
-そのうちBEAR.SaturdayのOrganizationアカウントに移す予定。
 
 概要
 --------------------
@@ -11,35 +9,34 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
     ``` 
     /path/to/your/project
         |
-        +--- App
-        +--- htdocs
+        +--- App/
+        +--- bin/
+        +--- data/
+        +--- htdocs/
+        +--- logs/
+        +--- tests/
+        |       |
+        |       +--- bootstrap.php
+        +--- tmp/
+        +--- vendor/
+        |       |
+        |       +--- この下にBEARが入ります
         |
-        +--- libs
-              |
-              +--- .pearrc ＜Here!
-              |
-              +--- pear
-                    |
-                    +--- php
-                          |
-                          +--- BEAR ＜Here!
-        +--- tmp
-        +--- logs
         +--- App.php
+        +--- composer.json
+        +--- phpunit.xml.dist
     ```
 
 ### だいたいの流れ
-- cd /path/to/your/local/project
-- プロジェクトのディレクトリに、composer をインストールする
-- ファイル「composer.json」を新規作成して保存
-- composer install を実行することで、BEAR.Saturdayのスケルトン作成までが完了
+- プロジェクトのディレクトリに、composer をインストールする（まだなければ）
+- composer で `create-project [プロジェクト名]` を実行することで、BEAR.Saturdayのスケルトン作成までが完了
 - phpunit 等をグローバルのComposer環境にインストールする
 
 
 インストール / 使い方
 --------------------
 
-1. cd /path/to/your/local/project
+1. `cd [プロジェクトの１つ上にあたるディレクトリ]`
 
 2. composerコマンドをまだインストールしていなければ、[`composer.phar`](https://getcomposer.org/composer.phar) をダウンロードして下さい。
 
@@ -53,33 +50,18 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
     $ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
     ```
 
-3. 下記内容でファイル名「composer.json」として保存します。 
-
-    ``` json
-    {
-        "require": {
-            "kumamidori/bear-saturday-extension-setup": "*"
-        },
-        "scripts": {
-            "post-install-cmd": "Installer::postInstall"
-        }
-    }
-    ```
-
-4. Composerを実行: `php composer.phar install`
+3. Composerを実行: `php composer.phar create-project bearsaturday/skelton [プロジェクトディレクトリ]`
 
    普通にSaturdayがセットアップされた状態になったことを確認。
 
-5. Composerを実行: `php composer.phar global require 'h4cc/phpqatools=*'`
+5. Composerを実行:
+
+   `php composer.phar global require 'h4cc/phpqatools=*'`
 
    PHPUnitをComposerのシステムグローバル環境にインストール。
    （通常だと、ホームの下に入ります。~/.composer/ 下）。
 
-6. Composerを実行: `php composer.phar dump-autoload`
-
-   Saturdayでテスト実行する際に、初期ロードされる bootstrap.php で、Composer標準のオートローダークラスを使うため。
-
-7. 上記5. でインストールしたphpunitコマンドへ、パスを通す。
+6. 上記5. でインストールしたphpunitコマンドへ、パスを通す。
 
     zsh の場合
 
@@ -100,8 +82,14 @@ BEAR-Saturday-Extension-Setup - Local Pear Installer
     ```
     で、```~/.composer/vendor/phpunit/phpunit/composer/bin/phpunit```になること。
 
-
     ※優先したいパスを左側に書いて先に評価させる必要がある（左から評価されてマッチしたパスが使われるので）
+
+
+    実行
+    ```
+    phpunit
+    ```
+    で、実行されたことを確認。
 
 
 余談：PHPUnitインストール手順と運用について
