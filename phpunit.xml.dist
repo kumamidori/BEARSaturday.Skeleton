@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="tests/bootstrap.php"
-         backupGlobals="false"
+<phpunit backupGlobals="false"
          backupStaticAttributes="false"
+         colors="true"
          strict="true"
-         verbose="true">
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnFailure="false"
+         syntaxCheck="false"
+         bootstrap="tests/bootstrap.php"
+>
+    <php>
+        <ini name="error_reporting" value="22519"/>
+    </php>
+
     <testsuites>
-        <testsuite name="BEAR.app">
+        <testsuite name="BEAR.Saturday.app">
             <directory suffix="Test.php">tests</directory>
         </testsuite>
     </testsuites>
 
     <logging>
-        <log type="coverage-html" target="build/coverage" title="BEAR.app"
+        <log type="coverage-html" target="build/coverage" title="BEAR.Saturday.app"
              charset="UTF-8" yui="true" highlight="true"
              lowUpperBound="35" highLowerBound="70"/>
         <log type="coverage-clover" target="build/logs/clover.xml"/>
