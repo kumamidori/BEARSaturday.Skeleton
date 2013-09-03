@@ -15,7 +15,8 @@
  */
 define('_BEAR_APP_HOME', realpath(dirname(__FILE__)));
 
-require __DIR__. '/libs/autload.php';
+// composer auto load
+require_once __DIR__ . '/libs/autoload.php';
 require_once 'BEAR.php';
 
 $bearMode = isset($_SERVER['bearmode']) ? $_SERVER['bearmode'] : 0;
