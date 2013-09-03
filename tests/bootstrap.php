@@ -13,3 +13,4 @@ require_once $appPath . '/App.php';
 // extension Xdebug
 //$filter = PHP_CodeCoverage_Filter::getInstance();
 //$filter->removeDirectoryFromWhitelist($appPath . 'App/views');
+ob_start();
