@@ -1,10 +1,9 @@
 BEARSaturday/Skeleton
-========================================
+=====================
 
-概要
---------------------
+### イントロダクション
 
-下記のセットアップを行います。
+BEAR.Saturdayのアプリケーションスケルトンのインストールとphpunit等のQAツールのセットアップを行います。
 
     ``` 
     /path/to/your/project
@@ -20,82 +19,84 @@ BEARSaturday/Skeleton
         +--- tmp/
         +--- vendor/
         |       |
-        |       +--- この下にBEARが入ります
+        |       +--- この下にBEAR/PEARが入ります
         |
         +--- App.php
         +--- composer.json
         +--- phpunit.xml.dist
     ```
 
-### だいたいの流れ
-- プロジェクトのディレクトリに、composer をインストールする（まだなければ）
-- composer で `create-project [プロジェクト名]` を実行することで、BEAR.Saturdayのスケルトン作成までが完了
-- phpunit 等をグローバルのComposer環境にインストールする
+### 概要
+
+- [composer](http://getcomposer.org/])のインストール
+- composerのcreate-projectコマンド`composer create-project [プロジェクト名]` でBEAR.Saturdayのアプリケーションスケルトンを作成
+- phpunit等のQAツールをグローバルのcomposer環境にインストール
 
 
-インストール / 使い方
---------------------
+インストール / セットアップ
+----------------------------
 
-1. `cd [プロジェクトの１つ上にあたるディレクトリ]`
+#### 1. composerのダウンロード
 
-2. composerコマンドをまだインストールしていなければ、[`composer.phar`](https://getcomposer.org/composer.phar) をダウンロードして下さい。
+[`composer.phar`](https://getcomposer.org/composer.phar) をダウンロードします。
 
-    ```
-    $ curl -sS https://getcomposer.org/installer | php
-    ```
+```bash
+$ curl -sS https://getcomposer.org/installer | php
+```
+curl コマンドが無ければ以下でも同じことができます。
 
-    ※curl コマンドが無ければ、以下でも同じことができます。
+```bash
+$ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
+```
 
-    ```
-    $ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
-    ```
+#### 2. アプリケーションスケルトンの作成
 
-3. Composerを実行: `php composer.phar create-project bearsaturday/skelton [プロジェクトディレクトリ]`
+```bash
+$ php composer.phar create-project bearsaturday/skelton [プロジェクトディレクトリ]
+```
 
-   普通にSaturdayがセットアップされた状態になったことを確認。
+[プロジェクトディレクトリ]が作成されている事を確認します。
 
-5. Composerを実行:
+#### 3. QAツールのインストール
 
-   `php composer.phar global require 'h4cc/phpqatools=*'`
+PHPUnitをcomposerのグローバル環境にインストールします。
 
-   PHPUnitをComposerのシステムグローバル環境にインストール。
-   （通常だと、ホームの下に入ります。~/.composer/ 下）。
+```bash
+$ php composer.phar global require 'h4cc/phpqatools=*' 'phpunit/phpunit-selenium:*' 'phpunit/phpunit-story:*'
+```
+ホーム下の.composerディレクトリ(~/.composer/)にインストールされます。
 
-6. 上記5. でインストールしたphpunitコマンドへ、パスを通す。
+#### 4. パスの設定
+　
+上記でインストールしたphpunit等のQAツールにパスを通します。(左から評価されてマッチしたパスが使われるので優先したいパスを左側に配置する必要があります)
 
-    zsh の場合
+~/.zshrc / ~/.bash_profile
 
+```bash
+export PATH=~/.composer/vendor/phpunit/phpunit/composer/bin:$PATH
+```
 
-    vi ~/.zshrc
-    ```
-    export PATH=~/.composer/vendor/phpunit/phpunit/composer/bin:$PATH
-    ```
+反映して確認します。
 
-    反映
-    ```
-    source ~/.zshrc
-    ```
+```bash
+$ source ~/.zshrc
+$ which phpunit
 
-    確認
-    ```
-    which phpunit
-    ```
-    で、```~/.composer/vendor/phpunit/phpunit/composer/bin/phpunit```になること。
+~/.composer/vendor/phpunit/phpunit/composer/bin/phpunit
+```
 
-    ※優先したいパスを左側に書いて先に評価させる必要がある（左から評価されてマッチしたパスが使われるので）
+#### 5.テスト実行
 
-
-    実行
-    ```
-    phpunit
-    ```
-    で、実行されたことを確認。
+```bash
+$ phpunit
+```
+アプリケーションスケルトンのテストが実行されることを確認します。
 
 
 余談：PHPUnitインストール手順と運用について
---------------------
+-------------------------------------------
 
-原典：
+参照：
 http://phpunit.de/manual/current/ja/installation.html
 
 
