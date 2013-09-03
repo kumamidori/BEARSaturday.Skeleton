@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="BEAR.app" default="build" basedir="appaaaa">
+<project name="BEAR.app" default="build" basedir=".">
  <property name="source" value="App"/>
 
  <target name="clean" description="Clean up and create artifact directories">
