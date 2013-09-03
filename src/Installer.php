@@ -9,8 +9,12 @@ class Installer
 {
     public static function postInstall(Event $event = null)
     {
-        $projectRoot = dirname(dirname(dirname(dirname(__DIR__))));
-        self::pearLocalSetup($event, $projectRoot);
+        self::setup($event);
+    }
+
+    private static function setUp(Event $event)
+    {
+
     }
 
     public static function pearLocalSetup(Event $event, $fullPath)

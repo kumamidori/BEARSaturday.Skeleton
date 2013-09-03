@@ -1,10 +1,49 @@
 {
-    "name": "kumamidori/bear-saturday-extension-setup",
-    "description":" ",
+    "name": "bear/saturday",
+    "description":"A resource oriented framework",
     "keywords":[
     ],
     "require": {
         "php": ">=5.3.2"
+    },
+    "repositories": [
+        {
+            "type": "pear",
+            "url": "http://pear.php.net"
+        },
+        {
+            "type": "pear",
+            "url": "http://pear.bear-project.net"
+        }
+    ],
+    "require": {
+        "pear-bear/bear": "*",
+        "pear-pear/Cache_Lite": "*",
+        "pear-pear/HTML_QuickForm": "*",
+        "pear-pear/HTML_QuickForm_Renderer_Tableless": "*",
+        "pear-pear/HTTP_Request2": "*",
+        "pear-pear/HTTP_Session2": "*",
+        "pear-pear/Log": "*",
+        "pear-pear/Net_UserAgent_Mobile": "*",
+        "pear-pear/Pager": "*",
+        "pear-pear/Spreadsheet_Excel_Writer": "*",
+        "pear-pear/XML_Serializer": "*",
+        "pear-pear/I18N_UnicodeString": "*",
+        "pear-pear/MDB2": "*",
+        "pear-pear/MDB2_Driver_mysql": "*",
+        "pear-pear/MDB2_Driver_mysqli": "*",
+        "pear-pear/XML_RSS": "*",
+        "pear-pear/Var_Dump": "*",
+        "pear-pear/Text_Highlighter": "*",
+        "pear-pear/Config": "*",
+        "pear-pear/File": "*",
+        "pear-pear/Console_CommandLine": "*",
+        "pear-pear/Console_Color": "*",
+        "pear-pear/File_SearchReplace": "*",
+        "pear-pear/HTML_CSS": "*",
+        "pear-pear/Net_Server": "*",
+        "pear-pear/Services_JSON": "*",
+        "firephp/firephp-core": "*" 
     },
     "scripts": {
         "post-install-cmd": "Installer::postInstall",
@@ -14,5 +53,8 @@
         "psr-0": {
             "": "src/"
         }
+    },
+    "config": {
+        "vendor-dir": "libs"
     }
 }
