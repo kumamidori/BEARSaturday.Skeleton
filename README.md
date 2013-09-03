@@ -5,7 +5,6 @@ BEARSaturday/Skeleton
 
 BEAR.Saturdayのアプリケーションスケルトンのインストールとphpunit等のQAツールのセットアップを行います。
 
-    ``` 
     /path/to/your/project
         |
         +--- App/
@@ -24,7 +23,6 @@ BEAR.Saturdayのアプリケーションスケルトンのインストールとp
         +--- App.php
         +--- composer.json
         +--- phpunit.xml.dist
-    ```
 
 ### 概要
 
