@@ -50,7 +50,7 @@ $ php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
 #### 2. アプリケーションスケルトンの作成
 
 ```bash
-$ php composer.phar create-project bearsaturday/skelton [プロジェクトディレクトリ]
+$ php composer.phar create-project bearsaturday/skeleton [プロジェクトディレクトリ]
 ```
 
 [プロジェクトディレクトリ]が作成されている事を確認します。
