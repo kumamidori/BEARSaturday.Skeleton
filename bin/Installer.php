@@ -10,6 +10,7 @@ class Installer
     public static function postInstall(Event $event = null)
     {
         self::setup($event);
+        $event->getIo()->write('<info>Thank you for using BEAR.Saturday.</info>');
     }
 
     private static function setUp(Event $event)
@@ -18,15 +19,16 @@ class Installer
         $commands = array(
             "chmod -R 777 {$dir}/logs/",
             "chmod -R 777 {$dir}/tmp/",
-            "chmod -R 777 {$dir}/tmp/",
-            "mv {$dir}/htdocs/htaccess.txt {$dir}/htdocs/.htaccess"
         );
         foreach($commands as $cmd) {
             $event->getIo()->write('<info>' . $cmd . '</info>');
             passthru($cmd, $retval);
         }
-
+        if (! file_exists("{$dir}/htdocs/htaccess.txt")) {
+            return;
+        }
         $htaccess = "{$dir}/htdocs/.htaccess";
+        rename("{$dir}/htdocs/htaccess.txt", $htaccess);
         $contents = file_get_contents($htaccess);
         $contents = str_replace('@APP-DIR@', "{$dir}", $contents);
         file_put_contents($htaccess, $contents);
