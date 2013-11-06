@@ -27,7 +27,7 @@ BEAR.Saturdayのアプリケーションスケルトンのインストールとp
 ### 概要
 
 - [composer](http://getcomposer.org/])のインストール
-- composerのcreate-projectコマンド`composer create-project [プロジェクト名]` でBEAR.Saturdayのアプリケーションスケルトンを作成
+- composerのcreate-projectコマンド`composer create-project bearsaturday/skeleton [プロジェクト名]` でBEAR.Saturdayのアプリケーションスケルトンを作成
 - phpunit等のQAツールをグローバルのcomposer環境にインストール
 
 
