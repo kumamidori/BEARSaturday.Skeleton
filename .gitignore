@@ -13,3 +13,4 @@ logs/*
 *.log
 *.tpl.php
 composer.phar
+vendor
