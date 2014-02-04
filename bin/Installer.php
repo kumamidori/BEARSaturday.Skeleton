@@ -1,4 +1,7 @@
 <?php
+
+namespace BEAR\Install;
+
 /**
  */
 use Composer\Script\Event;

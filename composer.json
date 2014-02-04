@@ -60,14 +60,14 @@
         "pear-pear/HTML_CSS": "*",
         "pear-pear/Net_Server": "*",
         "pear-pear/Services_JSON": "*",
-        "firephp/firephp-core": "*"
+        "firephp/firephp-core": "*@dev"
     },
     "scripts": {
-        "post-install-cmd": "Installer::postInstall"
+        "post-install-cmd": "\\BEAR\\Install\\Installer::postInstall"
     },
     "autoload": {
-        "psr-0": {
-            "": "bin/"
+        "psr-4": {
+            "BEAR\\Install": "bin/"
         }
     }
 }
