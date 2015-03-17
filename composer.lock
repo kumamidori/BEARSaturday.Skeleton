@@ -1,22 +1,60 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "4d1f634456aa804cdc6067f1f97ee1a1",
+    "hash": "e15cd55aa086e855dfd29170a1dd7b43",
     "packages": [
+        {
+            "name": "bearsaturday/bearsaturday",
+            "version": "0.9.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bearsaturday/BEAR.Saturday.git",
+                "reference": "680d6eea70d53c9c047ad59e050bc85d391695f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bearsaturday/BEAR.Saturday/zipball/680d6eea70d53c9c047ad59e050bc85d391695f8",
+                "reference": "680d6eea70d53c9c047ad59e050bc85d391695f8",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop-2": "0.9.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Closure"
+            ],
+            "authors": [
+                {
+                    "name": "Akihito Koriyama",
+                    "email": "akihito.koriyama@gmail.com"
+                }
+            ],
+            "description": "BEAR.Saturday framework for PHP 5.2+",
+            "keywords": [
+                "BEAR.Saturday",
+                "framework"
+            ],
+            "time": "2015-03-17 07:26:14"
+        },
         {
             "name": "firephp/firephp-core",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firephp/firephp-core.git",
-                "reference": "72493df5f36b0239adf7694240f91eca4bc25099"
+                "reference": "67b5aa8e314eb88f8927d1213ea268effa1dfa3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firephp/firephp-core/zipball/72493df5f36b0239adf7694240f91eca4bc25099",
-                "reference": "72493df5f36b0239adf7694240f91eca4bc25099",
+                "url": "https://api.github.com/repos/firephp/firephp-core/zipball/67b5aa8e314eb88f8927d1213ea268effa1dfa3d",
+                "reference": "67b5aa8e314eb88f8927d1213ea268effa1dfa3d",
                 "shasum": ""
             },
             "type": "library",
@@ -42,67 +80,14 @@
             ],
             "description": "Traditional FirePHPCore library for sending PHP variables to the browser.",
             "homepage": "https://github.com/firephp/firephp-core",
-            "time": "2013-11-06 16:41:22"
-        },
-        {
-            "name": "pear-pear.bear-project.net/BEAR",
-            "version": "0.9.12",
-            "dist": {
-                "type": "file",
-                "url": "http://pear.bear-project.net/get/BEAR-0.9.12.tgz",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "pear-pear.bear-project.net/panda": ">=0.3.38.0",
-                "php": ">=5.2.0.0"
-            },
-            "replace": {
-                "pear-bear/bear": "== 0.9.12.0"
-            },
-            "type": "pear-library",
-            "autoload": {
-                "classmap": [
-                    ""
-                ]
-            },
-            "include-path": [
-                "/"
-            ],
-            "description": "BEAR is web application framework package."
-        },
-        {
-            "name": "pear-pear.bear-project.net/Panda",
-            "version": "0.3.39",
-            "dist": {
-                "type": "file",
-                "url": "http://pear.bear-project.net/get/Panda-0.3.39.tgz",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "php": ">=5.2.0.0"
-            },
-            "replace": {
-                "pear-bear/panda": "== 0.3.39.0"
-            },
-            "type": "pear-library",
-            "autoload": {
-                "classmap": [
-                    ""
-                ]
-            },
-            "include-path": [
-                "/"
-            ],
-            "description": "Panda is PHP Error handler and debug/trace print utility."
+            "time": "2014-11-26 18:59:18"
         },
         {
             "name": "pear-pear.php.net/Archive_Tar",
-            "version": "1.3.11",
+            "version": "1.3.15",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Archive_Tar-1.3.11.tgz",
+                "url": "http://pear.php.net/get/Archive_Tar-1.3.15.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -110,7 +95,7 @@
                 "php": ">=4.3.0.0"
             },
             "replace": {
-                "pear-pear/archive_tar": "== 1.3.11.0"
+                "pear-pear/archive_tar": "== 1.3.15.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -120,6 +105,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "New BSD\n License"
             ],
             "description": "This class provides handling of tar files in PHP.\nIt supports creating, listing, extracting and adding to tar files.\nGzip support is available if PHP has the zlib extension built-in or\nloaded. Bz2 compression is also supported with the bz2 extension loaded."
         },
@@ -230,18 +218,18 @@
         },
         {
             "name": "pear-pear.php.net/Console_Getopt",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Console_Getopt-1.3.1.tgz",
+                "url": "http://pear.php.net/get/Console_Getopt-1.4.0.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">=4.3.0.0"
+                "php": ">=5.4.0.0"
             },
             "replace": {
-                "pear-pear/console_getopt": "== 1.3.1.0"
+                "pear-pear/console_getopt": "== 1.4.0.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -251,6 +239,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "PHP License"
             ],
             "description": "This is a PHP implementation of &quot;getopt&quot; supporting both\nshort and long options."
         },
@@ -367,10 +358,10 @@
         },
         {
             "name": "pear-pear.php.net/HTML_QuickForm",
-            "version": "3.2.13",
+            "version": "3.2.14",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/HTML_QuickForm-3.2.13.tgz",
+                "url": "http://pear.php.net/get/HTML_QuickForm-3.2.14.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -379,7 +370,7 @@
                 "php": ">=4.3.0.0"
             },
             "replace": {
-                "pear-pear/html_quickform": "== 3.2.13.0"
+                "pear-pear/html_quickform": "== 3.2.14.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -389,6 +380,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "PHP License"
             ],
             "description": "NOTICE: development of HTML_QuickForm version 3 is frozen. Please submit\nfeature requests for HTML_QuickForm2 package.\n\nThe HTML_QuickForm package provides methods to dynamically create, validate\nand render HTML forms.\n\nFeatures:\n* More than 20 ready-to-use form elements.\n* XHTML compliant generated code.\n* Numerous mixable and extendable validation rules.\n* Automatic server-side validation and filtering.\n* On request javascript code generation for client-side validation.\n* File uploads support.\n* Total customization of form rendering.\n* Support for external template engines (ITX, Sigma, Flexy, Smarty).\n* Pluggable elements, rules and renderers extensions."
         },
@@ -649,10 +643,10 @@
         },
         {
             "name": "pear-pear.php.net/Net_URL2",
-            "version": "2.0.5",
+            "version": "2.1.1",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Net_URL2-2.0.5.tgz",
+                "url": "http://pear.php.net/get/Net_URL2-2.1.1.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -660,7 +654,7 @@
                 "php": ">=5.1.4.0"
             },
             "replace": {
-                "pear-pear/net_url2": "== 2.0.5.0"
+                "pear-pear/net_url2": "== 2.1.1.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -670,6 +664,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "BSD-3-Clause"
             ],
             "description": "Provides parsing of URLs into their constituent parts (scheme, host, path etc.), URL generation, and resolving of\n    relative URLs."
         },
@@ -729,17 +726,17 @@
         },
         {
             "name": "pear-pear.php.net/PEAR",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/PEAR-1.9.4.tgz",
+                "url": "http://pear.php.net/get/PEAR-1.9.5.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "ext-pcre": "*",
                 "ext-xml": "*",
-                "pear-pear.php.net/archive_tar": ">=1.3.7.0",
+                "pear-pear.php.net/archive_tar": ">=1.3.11.0",
                 "pear-pear.php.net/console_getopt": ">=1.2.0.0",
                 "pear-pear.php.net/structures_graph": ">=1.0.2.0",
                 "pear-pear.php.net/xml_util": ">=1.2.0.0",
@@ -750,7 +747,7 @@
                 "pear-pear.php.net/pear_frontend_web": "<=0.4.0.0"
             },
             "replace": {
-                "pear-pear/pear": "== 1.9.4.0"
+                "pear-pear/pear": "== 1.9.5.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -760,6 +757,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "New BSD License"
             ],
             "description": "The PEAR package contains:\n * the PEAR installer, for creating, distributing\n   and installing packages\n * the PEAR_Exception PHP5 error handling mechanism\n * the PEAR_ErrorStack advanced error handling mechanism\n * the PEAR_Error error handling mechanism\n * the OS_Guess class for retrieving info about the OS\n   where PHP is running on\n * the System class for quick handling of common operations\n   with files and directories\n * the PEAR base class\n  Features in a nutshell:\n  * full support for channels\n  * pre-download dependency validation\n  * new package.xml 2.0 format allows tremendous flexibility while maintaining BC\n  * support for optional dependency groups and limited support for sub-packaging\n  * robust dependency support\n  * full dependency validation on uninstall\n  * remote install for hosts with only ftp access - no more problems with\n    restricted host installation\n  * full support for mirroring\n  * support for bundling several packages into a single tarball\n  * support for static dependencies on a url-based package\n  * support for custom file roles and installation tasks"
         },
@@ -844,18 +844,18 @@
         },
         {
             "name": "pear-pear.php.net/Structures_Graph",
-            "version": "1.0.4",
+            "version": "1.1.0",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Structures_Graph-1.0.4.tgz",
+                "url": "http://pear.php.net/get/Structures_Graph-1.1.0.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">=4.2.0.0"
+                "php": ">=5.3.0.0"
             },
             "replace": {
-                "pear-pear/structures_graph": "== 1.0.4.0"
+                "pear-pear/structures_graph": "== 1.1.0.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -865,6 +865,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "LGPL License"
             ],
             "description": "Structures_Graph is a package for creating and manipulating graph datastructures. It allows building of directed\nand undirected graphs, with data and metadata stored in nodes. The library provides functions for graph traversing\nas well as for characteristic extraction from the graph topology."
         },
@@ -896,33 +899,6 @@
                 "/"
             ],
             "description": "Text_Highlighter is a package for syntax highlighting.\n\nIt provides a base class provining all the functionality,\nand a descendent classes geneator class.\n\nThe main idea is to simplify creation of subclasses\nimplementing syntax highlighting for particular language.\nSubclasses do not implement any new functioanality,\nthey just provide syntax highlighting rules.\nThe rules sources are in XML format.\n\nTo create a highlighter for a language, there is no need\nto code a new class manually. Simply describe the rules\nin XML file and use Text_Highlighter_Generator to create\na new class."
-        },
-        {
-            "name": "pear-pear.php.net/Var_Dump",
-            "version": "1.0.4",
-            "dist": {
-                "type": "file",
-                "url": "http://pear.php.net/get/Var_Dump-1.0.4.tgz",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "ext-pcre": "*",
-                "php": ">=4.0.4.0"
-            },
-            "replace": {
-                "pear-pear/var_dump": "== 1.0.4.0"
-            },
-            "type": "pear-library",
-            "autoload": {
-                "classmap": [
-                    ""
-                ]
-            },
-            "include-path": [
-                "/"
-            ],
-            "description": "The Var_Dump class is a wrapper for the var_dump function.\n\nThe var_dump function displays structured information about expressions that includes its type and value. Arrays are explored recursively with values indented to show structure.\n\nThe Var_Dump class captures the output of the var_dump function, by using output control functions, and then uses external renderer classes for displaying the result in various graphical ways :\n* Simple text,\n* HTML/XHTML text,\n* HTML/XHTML table,\n* XML,\n* ..."
         },
         {
             "name": "pear-pear.php.net/XML_Parser",
@@ -1010,19 +986,19 @@
         },
         {
             "name": "pear-pear.php.net/XML_Util",
-            "version": "1.2.1",
+            "version": "1.3.0",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/XML_Util-1.2.1.tgz",
+                "url": "http://pear.php.net/get/XML_Util-1.3.0.tgz",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "ext-pcre": "*",
-                "php": ">=4.3.0.0"
+                "php": ">=5.3.0.0"
             },
             "replace": {
-                "pear-pear/xml_util": "== 1.2.1.0"
+                "pear-pear/xml_util": "== 1.3.0.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -1033,23 +1009,22 @@
             "include-path": [
                 "/"
             ],
+            "license": [
+                "BSD License"
+            ],
             "description": "Selection of methods that are often needed when working with XML documents.  Functionality includes creating of attribute lists from arrays, creation of tags, validation of XML names and more."
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "firephp/firephp-core": 20
     },
+    "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.2"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }

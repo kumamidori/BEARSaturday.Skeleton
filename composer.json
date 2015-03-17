@@ -26,15 +26,11 @@
         {
             "type": "pear",
             "url": "http://pear.php.net"
-        },
-        {
-            "type": "pear",
-            "url": "http://pear.bear-project.net"
         }
     ],
     "require": {
         "php": ">=5.3.2",
-        "pear-bear/bear": "*",
+        "bearsaturday/bearsaturday": "~0.9",
         "pear-pear/Cache_Lite": "*",
         "pear-pear/HTML_QuickForm": "*",
         "pear-pear/HTML_QuickForm_Renderer_Tableless": "*",
@@ -50,7 +46,6 @@
         "pear-pear/MDB2_Driver_mysql": "*",
         "pear-pear/MDB2_Driver_mysqli": "*",
         "pear-pear/XML_RSS": "*",
-        "pear-pear/Var_Dump": "*",
         "pear-pear/Text_Highlighter": "*",
         "pear-pear/Config": "*",
         "pear-pear/File": "*",
@@ -67,7 +62,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BEAR\\Install": "bin/"
+            "BEAR\\Install\\": "bin/"
         }
     }
 }
