@@ -60,6 +60,7 @@ class App_Resource_Execute_App extends BEAR_Resource_Execute_Adapter
             $config = array('info' => compact('method'), 'code' => 400);
             throw new BEAR_Resource_Exception('Method not allowed', $config);
         }
+
         return $result;
     }
 }

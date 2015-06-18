@@ -66,7 +66,7 @@ abstract class App_Page extends BEAR_Page
      * 例外
      *
      * @return void
-     * @throws $e 受け取った例外
+     * @throws $e   受け取った例外
      */
     public function onException(Exception $e)
     {

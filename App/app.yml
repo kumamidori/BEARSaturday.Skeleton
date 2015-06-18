@@ -42,7 +42,7 @@ BEAR_Form:
   method: 'post'
   # アトリビュート
   attributes: null
-  
+
 BEAR_Page_Ajax:
   # double submit cookieチェック
   security_check: false
@@ -73,7 +73,7 @@ App_Main:
   __injector: 'onInject'
   # Page::onShutdown()有効化
   enable_onshutdown: false
-  
+
 App_Db:
   dsn:
     default: 'mysql://root:@localhost/bear_demo'

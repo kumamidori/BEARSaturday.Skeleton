@@ -60,6 +60,7 @@ class App_Ro_Untitled extends BEAR_Ro
         } elseif (MDB2::isError($result)) {
             throw new Panda_Exception('登録できませんでした', 500);
         }
+
         return $result;
     }
 
@@ -93,6 +94,7 @@ class App_Ro_Untitled extends BEAR_Ro
             $params['created_at'] = _BEAR_DATETIME;
             $result = $extended->autoExecute(App_DB::TABLE_PROFILE, $params, MDB2_AUTOQUERY_INSERT);
         }
+
         return $result;
     }
 
@@ -114,6 +116,7 @@ class App_Ro_Untitled extends BEAR_Ro
         } else {
             $result = $this->_db->queryAll($sql);
         }
+
         return $result;
     }
 
@@ -133,6 +136,7 @@ class App_Ro_Untitled extends BEAR_Ro
         /* @var $extended MDB2_Extended */
         $where = 'id = ' . $this->_db->quote($values['id'], 'integer');
         $result = $extended->autoExecute($this->_table, $values, MDB2_AUTOQUERY_UPDATE, $where);
+
         return $result;
     }
 
@@ -146,6 +150,7 @@ class App_Ro_Untitled extends BEAR_Ro
     public function onLink($values)
     {
         $links = array('profile' => "user/profile?user_id={$values['id']}");
+
         return $links;
     }
 }
