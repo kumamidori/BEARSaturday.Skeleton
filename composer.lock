@@ -1,93 +1,103 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e15cd55aa086e855dfd29170a1dd7b43",
+    "hash": "88ec24b7399c5449d7044b7e55061270",
     "packages": [
         {
-            "name": "bearsaturday/bearsaturday",
-            "version": "0.9.20",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bearsaturday/BEAR.Saturday.git",
-                "reference": "680d6eea70d53c9c047ad59e050bc85d391695f8"
-            },
+            "name": "pear-bearsaturday.github.io/pear/BEAR",
+            "version": "0.9.22",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bearsaturday/BEAR.Saturday/zipball/680d6eea70d53c9c047ad59e050bc85d391695f8",
-                "reference": "680d6eea70d53c9c047ad59e050bc85d391695f8",
-                "shasum": ""
+                "type": "file",
+                "url": "http://bearsaturday.github.io/pear/get/BEAR-0.9.22.tgz",
+                "reference": null,
+                "shasum": null
             },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop-2": "0.9.x-dev"
-                }
+            "require": {
+                "pear-bearsaturday.github.io/pear/panda": ">=0.3.38.0",
+                "pear-pear.php.net/cache_lite": ">=1.7.0.0",
+                "pear-pear.php.net/config": ">=1.10.0.0",
+                "pear-pear.php.net/console_color": ">=1.0.2.0",
+                "pear-pear.php.net/console_commandline": ">=1.0.6.0",
+                "pear-pear.php.net/console_table": ">=1.1.3.0",
+                "pear-pear.php.net/file": ">=1.3.0.0",
+                "pear-pear.php.net/file_searchreplace": ">=1.1.2.0",
+                "pear-pear.php.net/html_css": ">=1.5.4.0",
+                "pear-pear.php.net/html_quickform": ">=3.2.5.0",
+                "pear-pear.php.net/html_quickform_renderer_tableless": ">=0.6.0.0",
+                "pear-pear.php.net/http_request2": ">=1.1.0.0",
+                "pear-pear.php.net/http_session2": ">=0.7.2.0",
+                "pear-pear.php.net/i18n_unicodestring": ">=0.2.1.0",
+                "pear-pear.php.net/log": ">=1.9.3.0",
+                "pear-pear.php.net/mdb2": ">=2.4.0.0",
+                "pear-pear.php.net/mdb2_driver_mysql": ">=1.4.0.0",
+                "pear-pear.php.net/mdb2_driver_mysqli": ">=1.4.0.0",
+                "pear-pear.php.net/net_server": ">=1.0.2.0",
+                "pear-pear.php.net/net_useragent_mobile": ">=0.26.0.0",
+                "pear-pear.php.net/pager": ">=2.3.6.0",
+                "pear-pear.php.net/services_json": ">=1.0.2.0",
+                "pear-pear.php.net/spreadsheet_excel_writer": ">=0.9.0.0",
+                "pear-pear.php.net/text_highlighter": ">=0.7.1.0",
+                "pear-pear.php.net/var_dump": ">=1.0.3.0",
+                "pear-pear.php.net/xml_rpc": ">=1.4.5.0",
+                "pear-pear.php.net/xml_rss": ">=0.7.2.0",
+                "pear-pear.php.net/xml_serializer": ">=0.18.0.0",
+                "php": ">=5.2.0.0"
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Closure"
-            ],
-            "authors": [
-                {
-                    "name": "Akihito Koriyama",
-                    "email": "akihito.koriyama@gmail.com"
-                }
-            ],
-            "description": "BEAR.Saturday framework for PHP 5.2+",
-            "keywords": [
-                "BEAR.Saturday",
-                "framework"
-            ],
-            "time": "2015-03-17 07:26:14"
-        },
-        {
-            "name": "firephp/firephp-core",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firephp/firephp-core.git",
-                "reference": "67b5aa8e314eb88f8927d1213ea268effa1dfa3d"
+            "replace": {
+                "pear-bear/bear": "== 0.9.22.0"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firephp/firephp-core/zipball/67b5aa8e314eb88f8927d1213ea268effa1dfa3d",
-                "reference": "67b5aa8e314eb88f8927d1213ea268effa1dfa3d",
-                "shasum": ""
-            },
-            "type": "library",
+            "type": "pear-library",
             "autoload": {
                 "classmap": [
-                    "lib/FirePHPCore/FirePHP.class.php",
-                    "lib/FirePHPCore/fb.php"
-                ],
-                "files": [
-                    "lib/FirePHPCore/fb.php"
+                    ""
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "/"
+            ],
             "license": [
-                "MIT"
+                "The BSD License"
             ],
-            "authors": [
-                {
-                    "name": "Christoph Dorn",
-                    "email": "christoph@christophdorn.com",
-                    "homepage": "http://christophdorn.com"
-                }
+            "description": "BEAR is web application framework package."
+        },
+        {
+            "name": "pear-bearsaturday.github.io/pear/Panda",
+            "version": "0.3.40",
+            "dist": {
+                "type": "file",
+                "url": "http://bearsaturday.github.io/pear/get/Panda-0.3.40.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=5.2.0.0"
+            },
+            "replace": {
+                "pear-bear/panda": "== 0.3.40.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
             ],
-            "description": "Traditional FirePHPCore library for sending PHP variables to the browser.",
-            "homepage": "https://github.com/firephp/firephp-core",
-            "time": "2014-11-26 18:59:18"
+            "license": [
+                "The BSD License"
+            ],
+            "description": "Panda is PHP Error handler and debug/trace print utility."
         },
         {
             "name": "pear-pear.php.net/Archive_Tar",
-            "version": "1.3.15",
+            "version": "1.3.16",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Archive_Tar-1.3.15.tgz",
+                "url": "http://pear.php.net/get/Archive_Tar-1.3.16.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -95,7 +105,7 @@
                 "php": ">=4.3.0.0"
             },
             "replace": {
-                "pear-pear/archive_tar": "== 1.3.15.0"
+                "pear-pear/archive_tar": "== 1.3.16.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -113,10 +123,10 @@
         },
         {
             "name": "pear-pear.php.net/Cache_Lite",
-            "version": "1.7.15",
+            "version": "1.7.16",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Cache_Lite-1.7.15.tgz",
+                "url": "http://pear.php.net/get/Cache_Lite-1.7.16.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -125,7 +135,7 @@
                 "php": ">=4.0.0.0"
             },
             "replace": {
-                "pear-pear/cache_lite": "== 1.7.15.0"
+                "pear-pear/cache_lite": "== 1.7.16.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -135,6 +145,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "lgpl"
             ],
             "description": "This package is a little cache system optimized for file containers. It is fast and safe (because it\n        uses file locking and/or anti-corruption tests)."
         },
@@ -244,6 +257,35 @@
                 "PHP License"
             ],
             "description": "This is a PHP implementation of &quot;getopt&quot; supporting both\nshort and long options."
+        },
+        {
+            "name": "pear-pear.php.net/Console_Table",
+            "version": "1.2.1",
+            "dist": {
+                "type": "file",
+                "url": "http://pear.php.net/get/Console_Table-1.2.1.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "php": ">=4.3.10.0"
+            },
+            "replace": {
+                "pear-pear/console_table": "== 1.2.1.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
+            ],
+            "license": [
+                "BSD"
+            ],
+            "description": "Provides a Console_Table class with methods such as addRow(), insertRow(), addCol() etc. to build console tables with or without headers and with user defined table rules, padding, and alignment."
         },
         {
             "name": "pear-pear.php.net/File",
@@ -495,10 +537,10 @@
         },
         {
             "name": "pear-pear.php.net/Log",
-            "version": "1.12.7",
+            "version": "1.12.9",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Log-1.12.7.tgz",
+                "url": "http://pear.php.net/get/Log-1.12.9.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -506,7 +548,7 @@
                 "php": ">=5.0.0.0"
             },
             "replace": {
-                "pear-pear/log": "== 1.12.7.0"
+                "pear-pear/log": "== 1.12.9.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -516,6 +558,9 @@
             },
             "include-path": [
                 "/"
+            ],
+            "license": [
+                "MIT License"
             ],
             "description": "The Log package provides an abstracted logging framework.  It includes output handlers for log files, databases, syslog, email, Firebug, and the console.  It also provides composite and subject-observer logging mechanisms."
         },
@@ -643,10 +688,10 @@
         },
         {
             "name": "pear-pear.php.net/Net_URL2",
-            "version": "2.1.1",
+            "version": "2.2.0",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Net_URL2-2.1.1.tgz",
+                "url": "http://pear.php.net/get/Net_URL2-2.2.0.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -654,7 +699,7 @@
                 "php": ">=5.1.4.0"
             },
             "replace": {
-                "pear-pear/net_url2": "== 2.1.1.0"
+                "pear-pear/net_url2": "== 2.2.0.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -765,10 +810,10 @@
         },
         {
             "name": "pear-pear.php.net/Pager",
-            "version": "2.4.8",
+            "version": "2.4.9",
             "dist": {
                 "type": "file",
-                "url": "http://pear.php.net/get/Pager-2.4.8.tgz",
+                "url": "http://pear.php.net/get/Pager-2.4.9.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -776,7 +821,7 @@
                 "php": ">=4.0.0.0"
             },
             "replace": {
-                "pear-pear/pager": "== 2.4.8.0"
+                "pear-pear/pager": "== 2.4.9.0"
             },
             "type": "pear-library",
             "autoload": {
@@ -787,7 +832,10 @@
             "include-path": [
                 "/"
             ],
-            "description": "It takes an array of data as input and pages it according to various parameters.\nIt also builds links within a specified range, and allows complete customization of the output (it even works with front controllers and mod_rewrite).\nTwo operating modes available: &quot;Jumping&quot; and &quot;Sliding&quot; window style."
+            "license": [
+                "BSD"
+            ],
+            "description": "It takes an array of data as input and pages it according to various parameters.\nIt also builds links within a specified range, and allows complete customization of the output (it even works with front controllers and mod_rewrite).\nTwo operating modes available: \"Jumping\" and \"Sliding\" window style."
         },
         {
             "name": "pear-pear.php.net/Services_JSON",
@@ -901,6 +949,36 @@
             "description": "Text_Highlighter is a package for syntax highlighting.\n\nIt provides a base class provining all the functionality,\nand a descendent classes geneator class.\n\nThe main idea is to simplify creation of subclasses\nimplementing syntax highlighting for particular language.\nSubclasses do not implement any new functioanality,\nthey just provide syntax highlighting rules.\nThe rules sources are in XML format.\n\nTo create a highlighter for a language, there is no need\nto code a new class manually. Simply describe the rules\nin XML file and use Text_Highlighter_Generator to create\na new class."
         },
         {
+            "name": "pear-pear.php.net/Var_Dump",
+            "version": "1.0.4",
+            "dist": {
+                "type": "file",
+                "url": "http://pear.php.net/get/Var_Dump-1.0.4.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=4.0.4.0"
+            },
+            "replace": {
+                "pear-pear/var_dump": "== 1.0.4.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
+            ],
+            "license": [
+                "PHP License"
+            ],
+            "description": "The Var_Dump class is a wrapper for the var_dump function.\n\nThe var_dump function displays structured information about expressions that includes its type and value. Arrays are explored recursively with values indented to show structure.\n\nThe Var_Dump class captures the output of the var_dump function, by using output control functions, and then uses external renderer classes for displaying the result in various graphical ways :\n* Simple text,\n* HTML/XHTML text,\n* HTML/XHTML table,\n* XML,\n* ..."
+        },
+        {
             "name": "pear-pear.php.net/XML_Parser",
             "version": "1.3.4",
             "dist": {
@@ -926,6 +1004,36 @@
                 "/"
             ],
             "description": "This is an XML parser based on PHPs built-in xml extension.\nIt supports two basic modes of operation: &amp;quot;func&amp;quot; and &amp;quot;event&amp;quot;.  In &amp;quot;func&amp;quot; mode, it will look for a function named after each element (xmltag_ELEMENT for start tags and xmltag_ELEMENT_ for end tags), and in &amp;quot;event&amp;quot; mode it uses a set of generic callbacks.\n\nSince version 1.2.0 there's a new XML_Parser_Simple class that makes parsing of most XML documents easier, by automatically providing a stack for the elements.\nFurthermore its now possible to split the parser from the handler object, so you do not have to extend XML_Parser anymore in order to parse a document with it."
+        },
+        {
+            "name": "pear-pear.php.net/XML_RPC",
+            "version": "1.5.5",
+            "dist": {
+                "type": "file",
+                "url": "http://pear.php.net/get/XML_RPC-1.5.5.tgz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "ext-xml": "*",
+                "php": ">=4.2.0.0"
+            },
+            "replace": {
+                "pear-pear/xml_rpc": "== 1.5.5.0"
+            },
+            "type": "pear-library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "include-path": [
+                "/"
+            ],
+            "license": [
+                "PHP License"
+            ],
+            "description": "A PEAR-ified version of Useful Inc's XML-RPC for PHP.\n\nIt has support for HTTP/HTTPS transport, proxies and authentication."
         },
         {
             "name": "pear-pear.php.net/XML_RSS",
@@ -1018,9 +1126,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "firephp/firephp-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
