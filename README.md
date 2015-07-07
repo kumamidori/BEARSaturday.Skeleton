@@ -1,9 +1,12 @@
 BEARSaturday/Skeleton
 =====================
+### Install via composer
 
-BEAR.Saturdayのアプリケーションスケルトンをセットアップします。
+```
+composer create-project bearsaturday/skeleton your-project-name
+```
 
-### ディレクトリ
+### Structure
 
     /path/to/your/project
         |
@@ -18,16 +21,12 @@ BEAR.Saturdayのアプリケーションスケルトンをセットアップし�
         +--- tmp/
         +--- vendor/
         |       |
-        |       +---pear-bearsaturday.github.io/ BEARフレームワーク
-        |       +---pear-pear.php.net/ PEARライブラリ
+        |       +---pear-bearsaturday.github.io/ BEAR framework
+        |       +---pear-pear.php.net/ PEAR framwork
         |
         +--- App.php
         +--- composer.json
         +--- phpunit.xml.dist
 
-### インストール
-
-- [composer](http://getcomposer.org/])のインストール
-- `composer create-project bearsaturday/skeleton [プロジェクト名]`
 
 
