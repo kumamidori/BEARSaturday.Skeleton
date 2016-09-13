@@ -3,11 +3,12 @@
  * App
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Session
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id: Session.php 2577 2011-06-20 08:57:15Z koriyama@bear-project.net $
+ *
  * @link       http://@link_url@
  */
 
@@ -15,16 +16,16 @@
  * Session
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Session
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id: Session.php 2577 2011-06-20 08:57:15Z koriyama@bear-project.net $
+ *
  * @link       http://@link_url@
  */
 class App_Session extends BEAR_Base
 {
-
     /**
      * セッション延長
      *
@@ -41,8 +42,6 @@ class App_Session extends BEAR_Base
 
     /**
      * Inject
-     *
-     * @return void
      */
     public function onInject()
     {
@@ -66,7 +65,6 @@ class App_Session extends BEAR_Base
     /**
      * Session timeout
      *
-     * @return void
      * @throws App_Session_Exception セッションタイムアウト例外
      */
     public function onSessionTimeOut()

@@ -3,10 +3,12 @@
  * App
  *
  * @category BEAR
- * @package  BEAR.app
+ *
  * @author   $Author:$ <username@example.com>
  * @license  @license@ http://@license_url@
+ *
  * @version  Release: @package_version@ $Id:$
+ *
  * @link     http://@link_url@
  */
 
@@ -28,11 +30,12 @@ App::init($bearMode);
  * App
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Db
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id:$
+ *
  * @link       http://@link_url@
  */
 class App
@@ -41,8 +44,6 @@ class App
      * App init
      *
      * @param int $bearMode
-     *
-     * @return void
      */
     public static function init($bearMode = 1)
     {

@@ -3,11 +3,12 @@
  * App
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Page
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id:$
+ *
  * @link       http://@link_url@
  */
 
@@ -15,17 +16,17 @@
  * Page
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Page
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id:$
+ *
  * @link       http://@link_url@
  * @abstract
  */
 abstract class App_Page extends BEAR_Page
 {
-
     /**
      *  セッション
      *
@@ -42,8 +43,6 @@ abstract class App_Page extends BEAR_Page
 
     /**
      * Inject
-     *
-     * @return void
      */
     public function onInject()
     {
@@ -54,8 +53,6 @@ abstract class App_Page extends BEAR_Page
 
     /**
      * 出力
-     *
-     * @return void
      */
     public function onOutput()
     {
@@ -65,8 +62,7 @@ abstract class App_Page extends BEAR_Page
     /**
      * 例外
      *
-     * @return void
-     * @throws $e   受け取った例外
+     * @throws $e 受け取った例外
      */
     public function onException(Exception $e)
     {
@@ -81,8 +77,6 @@ abstract class App_Page extends BEAR_Page
 
     /**
      * セッションタイムアウト
-     *
-     * @return void
      */
     public function onSessionTimeout()
     {

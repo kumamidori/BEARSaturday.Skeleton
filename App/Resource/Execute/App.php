@@ -1,14 +1,6 @@
 <?php
 /**
  * App
- *
- * @category   BEAR
- * @package    BEAR.app
- * @subpackage Resource
- * @author     $Author:$ <username@example.com>
- * @license    @license@ http://@license_url@
- * @version    Release: @package_version@ $Id:$
- * @link       http://@link_url@
  */
 
 /**
@@ -17,14 +9,6 @@
  * アプリケーション作製のリソースサンプルです。
  * app://self/path/to/fileと指定されたファイルの中身をリソースbodyとして扱います。
  * ML, YAML, CSV, INIファイルをサポートしています。
- *
- * @category   BEAR
- * @package    BEAR.app
- * @subpackage Resource
- * @author     $Author:$ <username@example.com>
- * @license    @license@ http://@license_url@
- * @version    Release: @package_version@ $Id:$
- * @link       http://@link_url@
  */
 class App_Resource_Execute_App extends BEAR_Resource_Execute_Adapter
 {
@@ -57,7 +41,7 @@ class App_Resource_Execute_App extends BEAR_Resource_Execute_Adapter
             $file = str_replace('app:/', '', $this->_config['uri']);
             $result = file_get_contents($file);
         } else {
-            $config = array('info' => compact('method'), 'code' => 400);
+            $config = ['info' => compact('method'), 'code' => 400];
             throw new BEAR_Resource_Exception('Method not allowed', $config);
         }
 

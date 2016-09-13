@@ -15,11 +15,11 @@ class App_Ro_Test_UserTest extends \PHPUnit_Framework_TestCase
 
     public function testReadCode()
     {
-        $params = array(
+        $params = [
             'uri' => 'Test/User',
-            'values' => array('id' => 1),
-            'options' => array()
-        );
+            'values' => ['id' => 1],
+            'options' => []
+        ];
         $ro = $this->resource->read($params)->getRo();
         $this->assertSame(200, $ro->getCode());
 

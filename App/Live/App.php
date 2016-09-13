@@ -1,15 +1,7 @@
 <?php
 /**
- * Live App
+ * Live App for fastest boot
  *
- * optimaized for fastest boot.
- *
- * @category  BEAR
- * @package   BEAR.app
- * @author    $Author:$ <username@example.com>
- * @license   @license@ http://@license_url@
- * @version   Release: @package_version@ $Id:$
- * @link      http://@link_url@
  */
 require_once 'BEAR.php';
 

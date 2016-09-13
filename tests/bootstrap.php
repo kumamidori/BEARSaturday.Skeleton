@@ -26,7 +26,7 @@ ini_set('default_charset', 'none');
 ini_set('date.timezone', 'Asia/Tokyo');
 
 $loader = require dirname(__DIR__) . '/vendor/autoload.php';
-/** @var $loader \Composer\Autoload\ClassLoader */
+/* @var $loader \Composer\Autoload\ClassLoader */
 $loader->add('', __DIR__);
 $loader->register();
 

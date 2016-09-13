@@ -2,7 +2,7 @@
 
 namespace BEAR\Install;
 
-/**
+/*
  */
 use Composer\Script\Event;
 
@@ -19,11 +19,11 @@ class Installer
     private static function setUp(Event $event)
     {
         $dir = dirname(__DIR__);
-        $commands = array(
+        $commands = [
             "chmod -R 777 {$dir}/logs/",
             "chmod -R 777 {$dir}/tmp/",
-        );
-        foreach($commands as $cmd) {
+        ];
+        foreach ($commands as $cmd) {
             $event->getIo()->write('<info>' . $cmd . '</info>');
             passthru($cmd, $retval);
         }

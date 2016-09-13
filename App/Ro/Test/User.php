@@ -5,10 +5,10 @@ class App_Ro_Test_User extends App_Ro
     /**
      * @var array
      */
-    protected static $userData = array(
-        array('id' => 0, 'name' => 'World', 'age' => 1.37E10),
-        array('id' => 1, 'name' => 'BEAR', 'age' => 8)
-    );
+    protected static $userData = [
+        ['id' => 0, 'name' => 'World', 'age' => 1.37E10],
+        ['id' => 1, 'name' => 'BEAR', 'age' => 8]
+    ];
 
     /**
      * Read
@@ -24,5 +24,4 @@ class App_Ro_Test_User extends App_Ro
 
         return self::$userData[$id];
     }
-
 }
