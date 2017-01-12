@@ -38,7 +38,9 @@
     "scripts": {
         "post-install-cmd": "\\BEAR\\Install\\Installer::postInstall"
     },
-    "secure-http": false,
+    "config": {
+        "secure-http": false
+    },
     "autoload": {
         "psr-4": {
             "BEAR\\Install\\": "bin/"
