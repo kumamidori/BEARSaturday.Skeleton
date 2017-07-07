@@ -26,11 +26,15 @@
         {
             "type": "pear",
             "url": "http://pear.php.net"
+        },
+        {
+             "type": "pear",
+             "url": "http://bearsaturday.github.io/pear"
         }
     ],
     "require": {
         "php": ">=5.3.2",
-        "bearsaturday/bearsaturday": "~0.9"
+        "pear-bearsaturday.github.io/pear/BEAR": "~0.9"
     },
     "require-dev": {
         "bear/qatools": "~1.0"
