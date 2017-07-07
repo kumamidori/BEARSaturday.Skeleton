@@ -1,26 +1,10 @@
 <?php
 /**
  * App
- *
- * @category   BEAR
- * @package    BEAR.app
- * @subpackage Ro
- * @author     $Author:$ <username@example.com>
- * @license    @license@ http://@license_url@
- * @version    Release: @package_version@ $Id:$
- * @link       http://@link_url@
  */
 
 /**
  * Sample resource
- *
- * @category   BEAR
- * @package    BEAR.app
- * @subpackage Ro
- * @author     $Author:$ <username@example.com>
- * @license    @license@ http://@license_url@
- * @version    Release: @package_version@ $Id:$
- * @link       http://@link_url@
  */
 class App_Ro_Untitled extends BEAR_Ro
 {
@@ -45,6 +29,7 @@ class App_Ro_Untitled extends BEAR_Ro
      * @param array $values
      *
      * @return array
+     *
      * @throws Panda_Exception
      * @required name 名前
      * @required age  年齢
@@ -52,7 +37,7 @@ class App_Ro_Untitled extends BEAR_Ro
     public function onCreate($values)
     {
         $extended = $this->_db->extended;
-        /** @param $extended MDB2_Extended */
+        /* @param $extended MDB2_Extended */
         $values['created_at'] = _BEAR_DATETIME; //現在時刻
         $result = $extended->autoExecute($this->_table, $values, MDB2_AUTOQUERY_INSERT);
         if (MDB2::isError($result, MDB2_ERROR_CONSTRAINT)) {
@@ -60,6 +45,7 @@ class App_Ro_Untitled extends BEAR_Ro
         } elseif (MDB2::isError($result)) {
             throw new Panda_Exception('登録できませんでした', 500);
         }
+
         return $result;
     }
 
@@ -93,6 +79,7 @@ class App_Ro_Untitled extends BEAR_Ro
             $params['created_at'] = _BEAR_DATETIME;
             $result = $extended->autoExecute(App_DB::TABLE_PROFILE, $params, MDB2_AUTOQUERY_INSERT);
         }
+
         return $result;
     }
 
@@ -114,6 +101,7 @@ class App_Ro_Untitled extends BEAR_Ro
         } else {
             $result = $this->_db->queryAll($sql);
         }
+
         return $result;
     }
 
@@ -133,6 +121,7 @@ class App_Ro_Untitled extends BEAR_Ro
         /* @var $extended MDB2_Extended */
         $where = 'id = ' . $this->_db->quote($values['id'], 'integer');
         $result = $extended->autoExecute($this->_table, $values, MDB2_AUTOQUERY_UPDATE, $where);
+
         return $result;
     }
 
@@ -145,7 +134,8 @@ class App_Ro_Untitled extends BEAR_Ro
      */
     public function onLink($values)
     {
-        $links = array('profile' => "user/profile?user_id={$values['id']}");
+        $links = ['profile' => "user/profile?user_id={$values['id']}"];
+
         return $links;
     }
 }

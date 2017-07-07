@@ -3,11 +3,12 @@
  * App
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Db
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id:$
+ *
  * @link       http://@link_url@
  */
 
@@ -15,11 +16,12 @@
  * Db
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Db
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id:$
+ *
  * @link       http://@link_url@
  */
 class App_Form_Untitled
@@ -33,19 +35,15 @@ class App_Form_Untitled
 
     /**
      * Inject
-     *
-     * @return void
      */
     public function onInject()
     {
-        $callback = array(__CLASS__, 'onRender');
-        $this->_form = array('formName' => 'form', 'callback' => $callback);
+        $callback = [__CLASS__, 'onRender'];
+        $this->_form = ['formName' => 'form', 'callback' => $callback];
     }
 
     /**
      * Mobile Inject
-     *
-     * @return void
      */
     public function onInjectMobile()
     {
@@ -55,13 +53,11 @@ class App_Form_Untitled
 
     /**
      * Form
-     *
-     * @return void
      */
     public function build()
     {
         $form = BEAR::dependency('BEAR_Form', $this->_form);
-        $form->setDefaults(array('name' => 'Kuma', 'email' => 'kuma@example.com'));
+        $form->setDefaults(['name' => 'Kuma', 'email' => 'kuma@example.com']);
         //  フォームヘッダー
         $form->addElement('header', 'main', '入力(確認）してください');
         //  フォームインプットフィールド
@@ -82,7 +78,6 @@ class App_Form_Untitled
      *
      * @param HTML_QuickForm_Renderer_Tableless $render
      *
-     * @return void
      * @see http://pear.php.net/package/HTML_QuickForm_Renderer_Tableless/docs
      */
     public static function onRender(HTML_QuickForm_Renderer_Tableless $render)

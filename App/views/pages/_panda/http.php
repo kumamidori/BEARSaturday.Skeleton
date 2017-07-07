@@ -20,7 +20,7 @@
 <p>
 <?php
  if ($error['code'] >= 500 && !$error['body']) {
-    echo "The server encountered temporary error.";
+     echo "The server encountered temporary error.";
  } else {
      echo $error['body'];
  }

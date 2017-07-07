@@ -3,10 +3,12 @@
  * App
  *
  * @category BEAR
- * @package  BEAR.app
+ *
  * @author   $Author:$ <username@example.com>
  * @license  @license@ http://@license_url@
+ *
  * @version  Release: @package_version@ $Id:$
+ *
  * @link     http://@link_url@
  */
 
@@ -17,7 +19,6 @@ define('_BEAR_APP_HOME', realpath(dirname(__FILE__)));
 
 // composer auto load
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'BEAR.php';
 
 $bearMode = isset($_SERVER['bearmode']) ? $_SERVER['bearmode'] : 0;
 // profile
@@ -29,11 +30,12 @@ App::init($bearMode);
  * App
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Db
+ *
  * @author     $Author:$ <username@example.com>
  * @license    @license@ http://@license_url@
+ *
  * @version    Release: @package_version@ $Id:$
+ *
  * @link       http://@link_url@
  */
 class App
@@ -42,8 +44,6 @@ class App
      * App init
      *
      * @param int $bearMode
-     *
-     * @return void
      */
     public static function init($bearMode = 1)
     {

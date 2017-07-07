@@ -5,9 +5,9 @@
  * PHP versions 5
  *
  * @category   BEAR
- * @package    BEAR.app
- * @subpackage Smarty
+ *
  * @author     $Author: koriyama@bear-project.net $ <username@example.com>
+ *
  * @version    SVN: Release: @package_version@ $Id:$ untitledmodfier.php 688 2009-07-03 15:57:58Z koriyama@bear-project.net $
  * @ignore
  */
@@ -19,6 +19,7 @@
  * @param int    $opt
  *
  * @return string
+ *
  * @link http://www.smarty.net/manual/ja/language.modifiers.php
  * @ignore
  */
